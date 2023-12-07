@@ -2,15 +2,13 @@
 """Type Checking"""
 from typing import List, Union
 
+
 def zoom_array(lst: List[int], factor: Union[int, float] = 2) -> List[int]:
-    """
-    Refactor Types to get output: 
-    {'lst': typing.Tuple, 'factor': <class 'int'>, 'return': typing.List}
-    """
+    """Type Check"""
     zoomed_in: List[int] = [
         item for item in lst
         for _ in range(int(factor))
-        ]
+    ]
     return zoomed_in
 
 
