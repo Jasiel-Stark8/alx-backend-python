@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """Type Checking"""
-from typing import List, Union
+from typing import Tuple, List
 
-
-def zoom_array(lst: List[int], factor: Union[int, float] = 2) -> List[int]:
-    """Type Check"""
-    zoomed_in: List[int] = [
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """Refactor Types to get output: {'lst': typing.Tuple, 'factor': <class 'int'>, 'return': typing.List}"""
+    zoomed_in: List = [
         item for item in lst
-        for _ in range(int(factor))
+        for i in range(factor)
     ]
     return zoomed_in
 
