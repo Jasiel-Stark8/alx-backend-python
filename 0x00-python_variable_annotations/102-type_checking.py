@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Type Checking"""
-from typing import Tuple, List, Union
+from typing import List, Union
 
 def zoom_array(lst: List[int], factor: Union[int, float] = 2) -> List[int]:
     """
