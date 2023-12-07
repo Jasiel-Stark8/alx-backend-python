@@ -3,7 +3,13 @@
 from typing import Tuple, List
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
-    """Refactor Types to get output: {'lst': typing.Tuple, 'factor': <class 'int'>, 'return': typing.List}"""
+    """Returns a list of integers multiplied by certain factor.
+    Args:
+        lst: A tuple of integers.
+        factor: An integer.
+    Returns:
+        A list of integers.
+    """
     zoomed_in: List = [
         item for item in lst
         for i in range(factor)
