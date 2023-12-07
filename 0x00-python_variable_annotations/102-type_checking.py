@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Type Checking"""
-from typing import Tuple, Any
+from typing import Tuple, List
 
-def zoom_array(lst: Tuple[Any, ...], factor: Any = 2) -> Tuple[Any, ...]:
-    """Refactor to accept [Any, ...]"""
-    zoomed_in: Tuple[Any, ...] = tuple(i * factor for i in lst)
+def zoom_array(lst: Tuple[int, ...], factor: float = 2) -> List[int]:
+    """
+    Refactor Types to get output: 
+    {'lst': typing.Tuple, 'factor': <class 'int'>, 'return': typing.List}
+    """
+    zoomed_in: List[int] = [int(i * factor) for i in lst]
     return zoomed_in
 
 
