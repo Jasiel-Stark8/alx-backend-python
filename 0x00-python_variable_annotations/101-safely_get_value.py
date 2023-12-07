@@ -16,4 +16,5 @@ def safely_get_value(dct: Mapping, key: Any, default: Optional[T] = None) -> Uni
     """
     if key in dct:
         return dct[key]
-    return default
+    else:
+        return default
