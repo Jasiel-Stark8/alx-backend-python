@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Async Generator"""
 
-import random
 import asyncio
 from typing import AsyncGenerator
 
@@ -16,6 +15,6 @@ async def main():
     async for value in async_generator():
         print(value)
 
+
 if __name__ == '__main__':
     asyncio.run(main())
-
