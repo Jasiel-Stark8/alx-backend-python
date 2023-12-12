@@ -7,15 +7,16 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
-    """_summary_
+    """
+    Executes multiple coroutines concurrently and returns a list of their results.
 
     Args:
-        n (_type_): _description_
-        max_delay (_type_): _description_
+        n (int): The number of coroutines to execute.
+        max_delay (int): The maximum delay to pass to the wait_random coroutine.
 
     Returns:
-        list[float]: _description_
+        List[float]: A list of the delays (floats) from each completed coroutine.
     """
-    spawn  = [wait_random(max_delay) for _ in range(n)]
-    completed = await asyncio.gather(*spawn)
+    tasks  = [wait_random(max_delay) for _ in range(n)]
+    completed = await asyncio.gather(*tasks)
     return completed
