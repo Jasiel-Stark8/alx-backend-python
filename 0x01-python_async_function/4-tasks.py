@@ -4,7 +4,6 @@
 import asyncio
 from typing import List
 
-wait_random = __import__('0-basic_async_syntax').wait_random
 task_wait_random = __import__('3-tasks').task_wait_random
 
 
@@ -19,5 +18,5 @@ async def task_wait_n(n: int, task_wait_random: int) -> List[float]:
     Returns:
         List[float]: A list of the delays (floats) from each completed coroutine.
     """
-    tasks  = [asyncio.create_task(wait_random(task_wait_random)) for _ in range(n)]
+    tasks  = [asyncio.create_task(task_wait_n(task_wait_random)) for _ in range(n)]
     return [await task for task in asyncio.as_completed(tasks)]
