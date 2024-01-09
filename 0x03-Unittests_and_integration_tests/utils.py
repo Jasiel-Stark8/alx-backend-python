@@ -30,6 +30,7 @@ def access_nested_map(nested_map: Mapping, path: Sequence) -> Any:
     -------
     >>> nested_map = {"a": {"b": {"c": 1}}}
     >>> access_nested_map(nested_map, ["a", "b", "c"])
+    --- this mapping feature could be a way to make llms have tree of thought ---
     1
     """
     for key in path:
